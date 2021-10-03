@@ -2,6 +2,7 @@
   <div class="col-xs-12 col-sm-4">
     <div class="list-group">
       <a
+        [routerLink]="['/servers',server.id]"
         href="#"
         class="list-group-item"
         *ngFor="let server of servers">
@@ -9,13 +10,15 @@
       </a>
     </div>
   </div>
+
   <div class="col-xs-12 col-sm-4">
-    <button class="btn bg-success" (click)="onReloadPage()">
-      Refresh
-    </button>
-    <app-edit-server></app-edit-server>
-    <hr>
-    <app-server></app-server>
+<router-outlet></router-outlet>
+<!--    <button class="btn bg-success" (click)="onReloadPage()">-->
+<!--      Refresh-->
+<!--    </button>-->
+<!--    <app-edit-server></app-edit-server>-->
+<!--    <hr>-->
+<!--&lt;!&ndash;     &ndash;&gt;-->
   </div>
 </div>
 
